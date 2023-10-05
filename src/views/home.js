@@ -13,8 +13,8 @@ const Home = (props) => {
   return (
     <div className="home-container">
       <Helmet>
-        <title>Togthr template</title>
-        <meta property="og:title" content="Togthr template" />
+        <title>pionatic template</title>
+        <meta property="og:title" content="pionatic template" />
       </Helmet>
       <section className="home-hero">
         <video
