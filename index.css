@@ -3022,6 +3022,9 @@
   .home-branding {
     padding-top: var(--dl-space-space-unit);
   }
+  .home-text02 {
+    font-size: 3em;
+  }
   .home-image04 {
     height: 400px;
   }
