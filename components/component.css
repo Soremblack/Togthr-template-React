@@ -1,0 +1,11 @@
+.component-container {
+  display: flex;
+  position: relative;
+}
+.component-form {
+  width: 850px;
+  height: 252px;
+  display: flex;
+  box-shadow: 5px 5px 10px 0px #d4d4d4;
+  background-color: #ea6565;
+}
