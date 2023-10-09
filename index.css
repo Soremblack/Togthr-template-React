@@ -85,7 +85,7 @@
   width: 120px;
   object-fit: cover;
 }
-.home-container1 {
+.home-container01 {
   flex: 0 0 auto;
   width: auto;
   height: auto;
@@ -388,7 +388,7 @@
   width: 24px;
   height: 24px;
 }
-.home-container3 {
+.home-container03 {
   display: contents;
 }
 .home-get-started {
@@ -1345,7 +1345,7 @@
   font-style: normal;
   font-weight: 500;
 }
-.home-container5 {
+.home-container05 {
   display: contents;
 }
 .home-customer {
@@ -1805,7 +1805,10 @@
   max-width: 560px;
   line-height: 24px;
 }
-.home-container7 {
+.home-container07 {
+  display: contents;
+}
+.home-container09 {
   display: contents;
 }
 @media(max-width: 991px) {
