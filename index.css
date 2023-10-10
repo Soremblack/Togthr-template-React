@@ -2261,10 +2261,16 @@
 }
 @media(max-width: 767px) {
   .home-container01 {
+    align-self: center;
     margin-top: var(--dl-space-space-twounits);
+    align-items: center;
+    justify-content: center;
   }
   .home-text {
+    font-size: 3em;
+    align-self: center;
     margin-top: 0px;
+    text-align: center;
   }
   .home-slides {
     gap: var(--dl-space-space-oneandhalfunits);
@@ -2756,10 +2762,11 @@
     margin-top: var(--dl-space-space-oneandhalfunits);
     border-color: var(--dl-color-gray-black);
     border-width: 0px;
+    margin-right: var(--dl-space-space-unit);
   }
   .home-text {
     color: var(--dl-color-gray-700);
-    font-size: 3em;
+    font-size: 2em;
     align-self: center;
   }
   .home-image4 {
