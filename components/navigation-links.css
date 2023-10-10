@@ -4,16 +4,23 @@
   align-items: center;
   flex-direction: row;
 }
+.navigation-links-text {
+  color: #ffffff;
+}
 .navigation-links-text1 {
+  color: #ffffff;
   margin-left: var(--dl-space-space-twounits);
 }
 .navigation-links-text2 {
+  display: none;
   margin-left: var(--dl-space-space-twounits);
 }
 .navigation-links-text3 {
+  color: #ffffff;
   margin-left: var(--dl-space-space-twounits);
 }
 .navigation-links-text4 {
+  color: #ffffff;
   margin-left: var(--dl-space-space-twounits);
 }
 
