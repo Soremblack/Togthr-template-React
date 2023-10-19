@@ -8,11 +8,11 @@
   color: #ffffff;
 }
 .navigation-links-text1 {
-  color: #ffffff;
+  display: none;
   margin-left: var(--dl-space-space-twounits);
 }
 .navigation-links-text2 {
-  display: none;
+  color: #ffffff;
   margin-left: var(--dl-space-space-twounits);
 }
 .navigation-links-text3 {
@@ -37,10 +37,10 @@
   }
   .navigation-links-text1 {
     color: #ffffff;
+    display: none;
   }
   .navigation-links-text2 {
     color: #ffffff;
-    display: none;
   }
   .navigation-links-text3 {
     color: #ffffff;

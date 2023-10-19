@@ -51,39 +51,33 @@
       <link href="./home1.css" rel="stylesheet" />
 
       <div class="home1-container">
-        <header data-role="Header" class="home1-header">
-          <svg viewBox="0 0 1024 1024" class="home1-icon">
-            <path
-              d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
-            ></path>
-          </svg>
+        <header data-thq="thq-navbar" class="home1-navbar-interactive">
           <img alt="logo" src="public/oujrsx01.svg" class="home1-image" />
-          <div class="home1-nav">
-            <nav
-              class="navigation-links-nav navigation-links-root-class-name10"
-            >
-              <span class="navigation-links-text"><span>Services</span></span>
-              <span class="navigation-links-text1"><span>Contact</span></span>
-              <span class="navigation-links-text2"><span>Pricing</span></span>
-              <span class="navigation-links-text3"><span>About Us</span></span>
-              <span class="navigation-links-text4">
-                <span>Case Studies</span>
-              </span>
+          <div data-thq="thq-navbar-nav" class="home1-desktop-menu">
+            <nav class="home1-links">
+              <span class="home1-text">About</span>
+              <span class="home1-text001">Features</span>
+              <span class="home1-text002">Pricing</span>
+              <span class="home1-text003">Team</span>
+              <span class="home1-text004">Blog</span>
             </nav>
+            <div class="home1-buttons">
+              <button class="home1-login button">Login</button>
+              <button class="button">Register</button>
+            </div>
           </div>
-          <div class="home1-btn-group">
-            <button class="home1-register button">Book a Call</button>
+          <div data-thq="thq-burger-menu" class="home1-burger-menu">
+            <svg viewBox="0 0 1024 1024" class="home1-icon">
+              <path
+                d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+              ></path>
+            </svg>
           </div>
-          <div data-role="BurgerMenu" class="home1-burger-menu"></div>
-          <div data-role="MobileMenu" class="home1-mobile-menu">
-            <div class="home1-nav1">
-              <div class="home1-container01">
-                <img
-                  alt="image"
-                  src="https://presentation-website-assets.teleporthq.io/logos/logo.png"
-                  class="home1-image01"
-                />
-                <div data-role="CloseMobileMenu" class="home1-menu-close">
+          <div data-thq="thq-mobile-menu" class="home1-mobile-menu">
+            <div class="home1-nav">
+              <div class="home1-top">
+                <img alt="image" src="public/oujrsx01.svg" class="home1-logo" />
+                <div data-thq="thq-close-menu" class="home1-close-menu">
                   <svg viewBox="0 0 1024 1024" class="home1-icon02">
                     <path
                       d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
@@ -91,19 +85,16 @@
                   </svg>
                 </div>
               </div>
-              <nav
-                class="navigation-links-nav navigation-links-root-class-name11"
-              >
-                <span class="navigation-links-text"><span>Services</span></span>
-                <span class="navigation-links-text1">
-                  <span>About Us</span>
-                </span>
-                <span class="navigation-links-text2"><span>Pricing</span></span>
-                <span class="navigation-links-text3">
-                  <span>Case Studies</span>
-                </span>
-                <span class="navigation-links-text4"><span>Contact</span></span>
+              <nav class="home1-links1">
+                <span class="home1-text005">About</span>
+                <span class="home1-text006">Features</span>
+                <span class="home1-text007">Pricing</span>
+                <span class="home1-text008">Team</span>
+                <span class="home1-text009">Blog</span>
               </nav>
+              <div class="home1-buttons1">
+                <button class="home1-login1 button">Login</button>
+              </div>
             </div>
             <div>
               <svg viewBox="0 0 950.8571428571428 1024" class="home1-icon04">
@@ -123,9 +114,16 @@
           </div>
         </header>
         <div class="home1-hero">
-          <h1 class="home1-text">
+          <h1 class="home1-text010">
             Driving Business Forward with Intelligent Data Solutions.
           </h1>
+          <video
+            src="public/graphs_-_2320%20(original).mp4"
+            loop=""
+            poster="public/graphs_-_2320%20(original).mp4"
+            autoplay=""
+            class="home1-video"
+          ></video>
           <button class="home1-button button">Explore Our Services</button>
         </div>
         <section class="home1-slides">
@@ -137,10 +135,10 @@
                     <img
                       alt="image"
                       src="public/slider-ecosystems-400h.png"
-                      class="home1-image02"
+                      class="home1-image01"
                     />
                     <div class="home1-content">
-                      <div class="home1-header01">
+                      <div class="home1-header">
                         <h3 class="home1-heading">Metaverse</h3>
                         <p class="home1-caption">
                           Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -162,10 +160,10 @@
                     <img
                       alt="image"
                       src="public/slider-ecosystems-400h.png"
-                      class="home1-image03"
+                      class="home1-image02"
                     />
                     <div class="home1-content01">
-                      <div class="home1-header02">
+                      <div class="home1-header01">
                         <h3 class="home1-heading01">Ecosystems</h3>
                         <p class="home1-caption02">
                           Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -187,10 +185,10 @@
                     <img
                       alt="image"
                       src="public/slider-ecosystems-400h.png"
-                      class="home1-image04"
+                      class="home1-image03"
                     />
                     <div class="home1-content02">
-                      <div class="home1-header03">
+                      <div class="home1-header02">
                         <h3 class="home1-heading02">Development</h3>
                         <p class="home1-caption04">
                           Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -212,10 +210,10 @@
                     <img
                       alt="image"
                       src="public/slider-ecosystems-400h.png"
-                      class="home1-image05"
+                      class="home1-image04"
                     />
                     <div class="home1-content03">
-                      <div class="home1-header04">
+                      <div class="home1-header03">
                         <h3 class="home1-heading03">Integration</h3>
                         <p class="home1-caption06">
                           Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -260,7 +258,7 @@
             </div>
           </div>
           <div>
-            <div class="home1-container03">
+            <div class="home1-container02">
               <script>
                 const el = document.querySelector('.blaze-slider')
 
@@ -277,20 +275,17 @@
           </div>
         </section>
         <div class="home1-features">
-          <h1 class="home1-text001">
+          <h1 class="home1-text011">
             <span>Explore our services</span>
             <br />
             <span></span>
           </h1>
-          <span class="home1-text004">
-            <span>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem
-              lorem, malesuada in metus vitae, scelerisque accumsan ipsum. Nam
-              pellentesque nulla leo, sagittis vehicula sem commodo nec.​
-            </span>
-            <span></span>
+          <span class="home1-text014">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem
+            lorem, malesuada in metus vitae, scelerisque accumsan ipsum. Nam
+            pellentesque nulla leo, sagittis vehicula sem commodo nec.​
           </span>
-          <div class="home1-container04">
+          <div class="home1-container03">
             <div
               class="feature-card3-feature-card feature-card3-root-class-name"
             >
@@ -366,16 +361,16 @@
           </div>
         </div>
         <div class="home1-steps">
-          <h1 class="home1-text007"><span>Discover Our Process</span></h1>
-          <span class="home1-text009">
+          <h1 class="home1-text015"><span>Discover Our Process</span></h1>
+          <span class="home1-text017">
             <span>From Digital Strategy to Implementation</span>
             <br />
           </span>
-          <div class="home1-container05">
+          <div class="home1-container04">
             <div class="home1-step">
-              <div class="home1-container06">
+              <div class="home1-container05">
                 <div class="home1-line"></div>
-                <div class="home1-container07">
+                <div class="home1-container06">
                   <svg viewBox="0 0 1024 1024" class="home1-icon22">
                     <path
                       d="M634 558q92-64 92-174 0-88-63-151t-151-63-151 63-63 151q0 46 27 96t65 78l36 26v98h172v-98zM512 86q124 0 211 87t87 211q0 156-128 244v98q0 18-12 30t-30 12h-256q-18 0-30-12t-12-30v-98q-128-88-128-244 0-124 87-211t211-87zM384 896v-42h256v42q0 18-12 30t-30 12h-172q-18 0-30-12t-12-30z"
@@ -384,9 +379,9 @@
                 </div>
                 <div class="home1-line01"></div>
               </div>
-              <div class="home1-container08">
-                <h1 class="home1-text012">Strategy</h1>
-                <span class="home1-text013">
+              <div class="home1-container07">
+                <h1 class="home1-text020">Strategy</h1>
+                <span class="home1-text021">
                   <span>
                     Lorem ipsum dolor sit amet, consectetur adipiscing.
                   </span>
@@ -396,9 +391,9 @@
               </div>
             </div>
             <div class="home1-step1">
-              <div class="home1-container09">
+              <div class="home1-container08">
                 <div class="home1-line02"></div>
-                <div class="home1-container10">
+                <div class="home1-container09">
                   <svg viewBox="0 0 1024 1024" class="home1-icon24">
                     <path
                       d="M746 512q26 0 45-18t19-46-19-46-45-18-45 18-19 46 19 46 45 18zM618 342q26 0 45-19t19-45-19-45-45-19-45 19-19 45 19 45 45 19zM406 342q26 0 45-19t19-45-19-45-45-19-45 19-19 45 19 45 45 19zM278 512q26 0 45-18t19-46-19-46-45-18-45 18-19 46 19 46 45 18zM512 128q158 0 271 100t113 242q0 88-63 150t-151 62h-74q-28 0-46 19t-18 45q0 22 16 42t16 44q0 28-18 46t-46 18q-160 0-272-112t-112-272 112-272 272-112z"
@@ -407,9 +402,9 @@
                 </div>
                 <div class="home1-line03"></div>
               </div>
-              <div class="home1-container11">
-                <h1 class="home1-text016">Design</h1>
-                <span class="home1-text017">
+              <div class="home1-container10">
+                <h1 class="home1-text024">Design</h1>
+                <span class="home1-text025">
                   <span>
                     Lorem ipsum dolor sit amet, consectetur adipiscing.
                   </span>
@@ -419,9 +414,9 @@
               </div>
             </div>
             <div class="home1-step2">
-              <div class="home1-container12">
+              <div class="home1-container11">
                 <div class="home1-line04"></div>
-                <div class="home1-container13">
+                <div class="home1-container12">
                   <svg viewBox="0 0 1024 1024" class="home1-icon26">
                     <path
                       d="M576 736l96 96 320-320-320-320-96 96 224 224z"
@@ -433,9 +428,9 @@
                 </div>
                 <div class="home1-line05"></div>
               </div>
-              <div class="home1-container14">
-                <h1 class="home1-text020">Development</h1>
-                <span class="home1-text021">
+              <div class="home1-container13">
+                <h1 class="home1-text028">Development</h1>
+                <span class="home1-text029">
                   <span>
                     Lorem ipsum dolor sit amet, consectetur adipiscing.
                   </span>
@@ -445,9 +440,9 @@
               </div>
             </div>
             <div class="home1-step3">
-              <div class="home1-container15">
+              <div class="home1-container14">
                 <div class="home1-line06"></div>
-                <div class="home1-container16">
+                <div class="home1-container15">
                   <svg viewBox="0 0 1024 1024" class="home1-icon29">
                     <path
                       d="M480 64c-265.096 0-480 214.904-480 480 0 265.098 214.904 480 480 480 265.098 0 480-214.902 480-480 0-265.096-214.902-480-480-480zM751.59 704c8.58-40.454 13.996-83.392 15.758-128h127.446c-3.336 44.196-13.624 87.114-30.68 128h-112.524zM208.41 384c-8.58 40.454-13.996 83.392-15.758 128h-127.444c3.336-44.194 13.622-87.114 30.678-128h112.524zM686.036 384c9.614 40.962 15.398 83.854 17.28 128h-191.316v-128h174.036zM512 320v-187.338c14.59 4.246 29.044 11.37 43.228 21.37 26.582 18.74 52.012 47.608 73.54 83.486 14.882 24.802 27.752 52.416 38.496 82.484h-155.264zM331.232 237.516c21.528-35.878 46.956-64.748 73.54-83.486 14.182-10 28.638-17.124 43.228-21.37v187.34h-155.264c10.746-30.066 23.616-57.68 38.496-82.484zM448 384v128h-191.314c1.88-44.146 7.666-87.038 17.278-128h174.036zM95.888 704c-17.056-40.886-27.342-83.804-30.678-128h127.444c1.762 44.608 7.178 87.546 15.758 128h-112.524zM256.686 576h191.314v128h-174.036c-9.612-40.96-15.398-83.854-17.278-128zM448 768v187.34c-14.588-4.246-29.044-11.372-43.228-21.37-26.584-18.74-52.014-47.61-73.54-83.486-14.882-24.804-27.75-52.418-38.498-82.484h155.266zM628.768 850.484c-21.528 35.876-46.958 64.746-73.54 83.486-14.184 9.998-28.638 17.124-43.228 21.37v-187.34h155.266c-10.746 30.066-23.616 57.68-38.498 82.484zM512 704v-128h191.314c-1.88 44.146-7.666 87.040-17.28 128h-174.034zM767.348 512c-1.762-44.608-7.178-87.546-15.758-128h112.524c17.056 40.886 27.344 83.806 30.68 128h-127.446zM830.658 320h-95.9c-18.638-58.762-44.376-110.294-75.316-151.428 42.536 20.34 81.058 47.616 114.714 81.272 21.48 21.478 40.362 44.938 56.502 70.156zM185.844 249.844c33.658-33.658 72.18-60.932 114.714-81.272-30.942 41.134-56.676 92.666-75.316 151.428h-95.898c16.138-25.218 35.022-48.678 56.5-70.156zM129.344 768h95.898c18.64 58.762 44.376 110.294 75.318 151.43-42.536-20.34-81.058-47.616-114.714-81.274-21.48-21.478-40.364-44.938-56.502-70.156zM774.156 838.156c-33.656 33.658-72.18 60.934-114.714 81.274 30.942-41.134 56.678-92.668 75.316-151.43h95.9c-16.14 25.218-35.022 48.678-56.502 70.156z"
@@ -456,9 +451,9 @@
                 </div>
                 <div class="home1-line07"></div>
               </div>
-              <div class="home1-container17">
-                <h1 class="home1-text024">Implementation</h1>
-                <span class="home1-text025">
+              <div class="home1-container16">
+                <h1 class="home1-text032">Implementation</h1>
+                <span class="home1-text033">
                   <span>
                     Lorem ipsum dolor sit amet, consectetur adipiscing.
                   </span>
@@ -470,16 +465,16 @@
           </div>
         </div>
         <div class="home1-steps1">
-          <h1 class="home1-text028"><span>Discover Our Process</span></h1>
-          <span class="home1-text030">
+          <h1 class="home1-text036"><span>Discover Our Process</span></h1>
+          <span class="home1-text038">
             <span>From Digital Strategy to Implementation</span>
             <br />
           </span>
-          <div class="home1-container18">
+          <div class="home1-container17">
             <div class="home1-step4">
-              <div class="home1-container19">
+              <div class="home1-container18">
                 <div class="home1-line08"></div>
-                <div class="home1-container20">
+                <div class="home1-container19">
                   <svg viewBox="0 0 1024 1024" class="home1-icon31">
                     <path
                       d="M634 558q92-64 92-174 0-88-63-151t-151-63-151 63-63 151q0 46 27 96t65 78l36 26v98h172v-98zM512 86q124 0 211 87t87 211q0 156-128 244v98q0 18-12 30t-30 12h-256q-18 0-30-12t-12-30v-98q-128-88-128-244 0-124 87-211t211-87zM384 896v-42h256v42q0 18-12 30t-30 12h-172q-18 0-30-12t-12-30z"
@@ -488,9 +483,9 @@
                 </div>
                 <div class="home1-line09"></div>
               </div>
-              <div class="home1-container21">
-                <h1 class="home1-text033">Strategy</h1>
-                <span class="home1-text034">
+              <div class="home1-container20">
+                <h1 class="home1-text041">Strategy</h1>
+                <span class="home1-text042">
                   <span>
                     Lorem ipsum dolor sit amet, consectetur adipiscing.
                   </span>
@@ -500,9 +495,9 @@
               </div>
             </div>
             <div class="home1-step5">
-              <div class="home1-container22">
+              <div class="home1-container21">
                 <div class="home1-line10"></div>
-                <div class="home1-container23">
+                <div class="home1-container22">
                   <svg viewBox="0 0 1024 1024" class="home1-icon33">
                     <path
                       d="M746 512q26 0 45-18t19-46-19-46-45-18-45 18-19 46 19 46 45 18zM618 342q26 0 45-19t19-45-19-45-45-19-45 19-19 45 19 45 45 19zM406 342q26 0 45-19t19-45-19-45-45-19-45 19-19 45 19 45 45 19zM278 512q26 0 45-18t19-46-19-46-45-18-45 18-19 46 19 46 45 18zM512 128q158 0 271 100t113 242q0 88-63 150t-151 62h-74q-28 0-46 19t-18 45q0 22 16 42t16 44q0 28-18 46t-46 18q-160 0-272-112t-112-272 112-272 272-112z"
@@ -511,9 +506,9 @@
                 </div>
                 <div class="home1-line11"></div>
               </div>
-              <div class="home1-container24">
-                <h1 class="home1-text037">Design</h1>
-                <span class="home1-text038">
+              <div class="home1-container23">
+                <h1 class="home1-text045">Design</h1>
+                <span class="home1-text046">
                   <span>
                     Lorem ipsum dolor sit amet, consectetur adipiscing.
                   </span>
@@ -523,9 +518,9 @@
               </div>
             </div>
             <div class="home1-step6">
-              <div class="home1-container25">
+              <div class="home1-container24">
                 <div class="home1-line12"></div>
-                <div class="home1-container26">
+                <div class="home1-container25">
                   <svg viewBox="0 0 1024 1024" class="home1-icon35">
                     <path
                       d="M576 736l96 96 320-320-320-320-96 96 224 224z"
@@ -537,9 +532,9 @@
                 </div>
                 <div class="home1-line13"></div>
               </div>
-              <div class="home1-container27">
-                <h1 class="home1-text041">Development</h1>
-                <span class="home1-text042">
+              <div class="home1-container26">
+                <h1 class="home1-text049">Development</h1>
+                <span class="home1-text050">
                   <span>
                     Lorem ipsum dolor sit amet, consectetur adipiscing.
                   </span>
@@ -549,9 +544,9 @@
               </div>
             </div>
             <div class="home1-step7">
-              <div class="home1-container28">
+              <div class="home1-container27">
                 <div class="home1-line14"></div>
-                <div class="home1-container29">
+                <div class="home1-container28">
                   <svg viewBox="0 0 1024 1024" class="home1-icon38">
                     <path
                       d="M480 64c-265.096 0-480 214.904-480 480 0 265.098 214.904 480 480 480 265.098 0 480-214.902 480-480 0-265.096-214.902-480-480-480zM751.59 704c8.58-40.454 13.996-83.392 15.758-128h127.446c-3.336 44.196-13.624 87.114-30.68 128h-112.524zM208.41 384c-8.58 40.454-13.996 83.392-15.758 128h-127.444c3.336-44.194 13.622-87.114 30.678-128h112.524zM686.036 384c9.614 40.962 15.398 83.854 17.28 128h-191.316v-128h174.036zM512 320v-187.338c14.59 4.246 29.044 11.37 43.228 21.37 26.582 18.74 52.012 47.608 73.54 83.486 14.882 24.802 27.752 52.416 38.496 82.484h-155.264zM331.232 237.516c21.528-35.878 46.956-64.748 73.54-83.486 14.182-10 28.638-17.124 43.228-21.37v187.34h-155.264c10.746-30.066 23.616-57.68 38.496-82.484zM448 384v128h-191.314c1.88-44.146 7.666-87.038 17.278-128h174.036zM95.888 704c-17.056-40.886-27.342-83.804-30.678-128h127.444c1.762 44.608 7.178 87.546 15.758 128h-112.524zM256.686 576h191.314v128h-174.036c-9.612-40.96-15.398-83.854-17.278-128zM448 768v187.34c-14.588-4.246-29.044-11.372-43.228-21.37-26.584-18.74-52.014-47.61-73.54-83.486-14.882-24.804-27.75-52.418-38.498-82.484h155.266zM628.768 850.484c-21.528 35.876-46.958 64.746-73.54 83.486-14.184 9.998-28.638 17.124-43.228 21.37v-187.34h155.266c-10.746 30.066-23.616 57.68-38.498 82.484zM512 704v-128h191.314c-1.88 44.146-7.666 87.040-17.28 128h-174.034zM767.348 512c-1.762-44.608-7.178-87.546-15.758-128h112.524c17.056 40.886 27.344 83.806 30.68 128h-127.446zM830.658 320h-95.9c-18.638-58.762-44.376-110.294-75.316-151.428 42.536 20.34 81.058 47.616 114.714 81.272 21.48 21.478 40.362 44.938 56.502 70.156zM185.844 249.844c33.658-33.658 72.18-60.932 114.714-81.272-30.942 41.134-56.676 92.666-75.316 151.428h-95.898c16.138-25.218 35.022-48.678 56.5-70.156zM129.344 768h95.898c18.64 58.762 44.376 110.294 75.318 151.43-42.536-20.34-81.058-47.616-114.714-81.274-21.48-21.478-40.364-44.938-56.502-70.156zM774.156 838.156c-33.656 33.658-72.18 60.934-114.714 81.274 30.942-41.134 56.678-92.668 75.316-151.43h95.9c-16.14 25.218-35.022 48.678-56.502 70.156z"
@@ -560,9 +555,9 @@
                 </div>
                 <div class="home1-line15"></div>
               </div>
-              <div class="home1-container30">
-                <h1 class="home1-text045">Implementation</h1>
-                <span class="home1-text046">
+              <div class="home1-container29">
+                <h1 class="home1-text053">Implementation</h1>
+                <span class="home1-text054">
                   <span>
                     Lorem ipsum dolor sit amet, consectetur adipiscing.
                   </span>
@@ -575,7 +570,7 @@
         </div>
         <section class="home1-get-started">
           <div class="home1-header-container">
-            <div class="home1-header05">
+            <div class="home1-header04">
               <h2 class="home1-heading04">
                 Companies will dolor sit amet, consectetur adipiscing elit, sed
                 do eiusmod tempor incididunt ut labore veniam and more
@@ -593,27 +588,27 @@
           <img
             alt="image"
             src="public/getstarted-800w.png"
-            class="home1-image06"
+            class="home1-image05"
           />
         </section>
         <section class="home1-objectives">
           <div class="home1-content04">
             <div class="home1-objectives-list">
               <div class="home1-objective objective">
-                <h3 class="home1-text050">DIGITAL STRATEGY</h3>
-                <p class="home1-text051"></p>
+                <h3 class="home1-text058">DIGITAL STRATEGY</h3>
+                <p class="home1-text059"></p>
               </div>
               <div class="home1-objective1 objective">
-                <h3 class="home1-text052">
+                <h3 class="home1-text060">
                   <span>DATA</span>
                   <br />
                   <span>ANALYTICS</span>
                 </h3>
-                <p class="home1-text056"></p>
+                <p class="home1-text064"></p>
               </div>
               <div class="home1-objective2 objective">
-                <h3 class="home1-text057">BUSINESS INTELLIGENCE</h3>
-                <p class="home1-text058"></p>
+                <h3 class="home1-text065">BUSINESS INTELLIGENCE</h3>
+                <p class="home1-text066"></p>
               </div>
             </div>
           </div>
@@ -624,16 +619,16 @@
             <img
               alt="image"
               src="public/experience-1400w.png"
-              class="home1-image07"
+              class="home1-image06"
             />
           </div>
           <div class="home1-content05">
-            <div class="home1-header06">
+            <div class="home1-header05">
               <div class="home1-header-container1">
-                <div class="home1-header07">
+                <div class="home1-header06">
                   <h2 class="home1-heading05">
                     <span>A worlds class&nbsp;</span>
-                    <span class="home1-text060">experience</span>
+                    <span class="home1-text068">experience</span>
                   </h2>
                 </div>
                 <p class="home1-caption09">
@@ -650,7 +645,7 @@
                       ></path>
                     </svg>
                   </div>
-                  <span class="home1-text061">
+                  <span class="home1-text069">
                     Duis aute irure dolor in reprehenderit
                   </span>
                 </div>
@@ -662,7 +657,7 @@
                       ></path>
                     </svg>
                   </div>
-                  <span class="home1-text062">Lorem ipsum dolor sit amet</span>
+                  <span class="home1-text070">Lorem ipsum dolor sit amet</span>
                 </div>
                 <div class="home1-check2">
                   <div class="home1-mark2">
@@ -672,7 +667,7 @@
                       ></path>
                     </svg>
                   </div>
-                  <span class="home1-text063">
+                  <span class="home1-text071">
                     Voluptate velit esse cillum dolore eu fugiat nulla
                   </span>
                 </div>
@@ -684,7 +679,7 @@
                       ></path>
                     </svg>
                   </div>
-                  <span class="home1-text064">
+                  <span class="home1-text072">
                     Excepteur sint occaecat cupidatat non proident sunt in culpa
                   </span>
                 </div>
@@ -692,8 +687,8 @@
             </div>
             <div class="home1-testimonial">
               <div class="home1-content06">
-                <span class="home1-text065">Testimonial</span>
-                <p class="home1-text066">
+                <span class="home1-text073">Testimonial</span>
+                <p class="home1-text074">
                   “Excepteur sint occaecat cupidatat non proident, sunt in culpa
                   qui officia deserunt mollit anim id est laborum.”
                 </p>
@@ -718,10 +713,10 @@
         </section>
         <section class="home1-create">
           <div class="home1-content07">
-            <div class="home1-header08">
+            <div class="home1-header07">
               <h2 class="home1-heading06">
                 <span>Create your own</span>
-                <span class="home1-text068">environment</span>
+                <span class="home1-text076">environment</span>
                 <span>now!</span>
                 <br />
               </h2>
@@ -736,10 +731,10 @@
         </section>
         <section class="home1-comparision">
           <div class="home1-header-container2">
-            <div class="home1-header09">
+            <div class="home1-header08">
               <h2 class="home1-heading07">
                 <span>Environment c</span>
-                <span class="home1-text075">omparision</span>
+                <span class="home1-text083">omparision</span>
                 <br />
               </h2>
             </div>
@@ -751,19 +746,19 @@
           <div class="home1-table">
             <div class="home1-row">
               <div class="home1-headers">
-                <span class="home1-text077">Placeholder</span>
+                <span class="home1-text085">Placeholder</span>
               </div>
               <div class="home1-plans">
                 <div class="home1-row01">
-                  <span class="home1-text078">TOGHTR</span>
-                  <span class="home1-text079">AGENCY</span>
-                  <span class="home1-text080">FRELLANCE</span>
+                  <span class="home1-text086">TOGHTR</span>
+                  <span class="home1-text087">AGENCY</span>
+                  <span class="home1-text088">FRELLANCE</span>
                 </div>
               </div>
             </div>
             <div class="home1-row02">
               <div class="home1-headers1">
-                <span class="home1-text081">
+                <span class="home1-text089">
                   Duis aute irure dolor in reprehenderit
                 </span>
               </div>
@@ -801,7 +796,7 @@
             </div>
             <div class="home1-row04">
               <div class="home1-headers2">
-                <span class="home1-text082">Lorem ipsum dolor sit amet</span>
+                <span class="home1-text090">Lorem ipsum dolor sit amet</span>
               </div>
               <div class="home1-plans2">
                 <div class="home1-row05">
@@ -829,14 +824,14 @@
             </div>
             <div class="home1-row06">
               <div class="home1-headers3">
-                <span class="home1-text083">
+                <span class="home1-text091">
                   Duis aute irure dolor in reprehenderit
                 </span>
               </div>
               <div class="home1-plans3">
                 <div class="home1-row07">
                   <div class="value">
-                    <span class="home1-text084">Custom</span>
+                    <span class="home1-text092">Custom</span>
                   </div>
                   <div class="value"><div class="line-line"></div></div>
                   <div class="value"><div class="line-line"></div></div>
@@ -845,17 +840,17 @@
             </div>
             <div class="home1-row08">
               <div class="home1-headers4">
-                <span class="home1-text085">
+                <span class="home1-text093">
                   Duis aute irure dolor in reprehenderit
                 </span>
               </div>
               <div class="home1-plans4">
                 <div class="home1-row09">
                   <div class="value">
-                    <span class="home1-text086">Unlimited</span>
+                    <span class="home1-text094">Unlimited</span>
                   </div>
                   <div class="value">
-                    <span class="home1-text087">Limited</span>
+                    <span class="home1-text095">Limited</span>
                   </div>
                   <div class="value"><div class="line-line"></div></div>
                 </div>
@@ -863,7 +858,7 @@
             </div>
             <div class="home1-row10">
               <div class="home1-headers5">
-                <span class="home1-text088">Lorem ipsum dolor sit amet</span>
+                <span class="home1-text096">Lorem ipsum dolor sit amet</span>
               </div>
               <div class="home1-plans5">
                 <div class="home1-row11">
@@ -878,14 +873,14 @@
                   </div>
                   <div class="value"><div class="line-line"></div></div>
                   <div class="value">
-                    <span class="home1-text089">Limited</span>
+                    <span class="home1-text097">Limited</span>
                   </div>
                 </div>
               </div>
             </div>
             <div class="home1-row12">
               <div class="home1-headers6">
-                <span class="home1-text090">Lorem ipsum dolor sit amet</span>
+                <span class="home1-text098">Lorem ipsum dolor sit amet</span>
               </div>
               <div class="home1-plans6">
                 <div class="home1-row13">
@@ -921,7 +916,7 @@
             </div>
             <div class="home1-row14">
               <div class="home1-headers7">
-                <span class="home1-text091">Lorem ipsum dolor sit amet</span>
+                <span class="home1-text099">Lorem ipsum dolor sit amet</span>
               </div>
               <div class="home1-plans7">
                 <div class="home1-row15">
@@ -935,7 +930,7 @@
                     </div>
                   </div>
                   <div class="value">
-                    <span class="home1-text092">Limited</span>
+                    <span class="home1-text100">Limited</span>
                   </div>
                   <div class="value"><div class="line-line"></div></div>
                 </div>
@@ -945,11 +940,11 @@
         </section>
         <section class="home1-data">
           <div class="home1-header-container3">
-            <div class="home1-header10">
+            <div class="home1-header09">
               <div class="home1-row16">
                 <h2 class="home1-heading08">
                   <span>Understand your data to&nbsp;manage all in one</span>
-                  <span class="home1-text094">platform</span>
+                  <span class="home1-text102">platform</span>
                   <br />
                 </h2>
               </div>
@@ -960,17 +955,17 @@
             </p>
           </div>
           <div class="home1-content08">
-            <div class="home1-image08">
+            <div class="home1-image07">
               <img
                 alt="image"
                 src="public/data-1400w.png"
-                class="home1-image09"
+                class="home1-image08"
               />
             </div>
             <div class="home1-accordion">
               <div data-role="accordion-container" class="accordion">
                 <div>
-                  <h3 class="home1-header11">Management</h3>
+                  <h3 class="home1-header10">Management</h3>
                   <p data-role="accordion-content" class="accordion-content">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
@@ -1003,7 +998,7 @@
               </div>
               <div data-role="accordion-container" class="accordion">
                 <div>
-                  <h3 class="home1-header12">Integrations</h3>
+                  <h3 class="home1-header11">Integrations</h3>
                   <p data-role="accordion-content" class="accordion-content">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
@@ -1036,7 +1031,7 @@
               </div>
               <div data-role="accordion-container" class="accordion">
                 <div>
-                  <h3 class="home1-header13">Customer Solutions</h3>
+                  <h3 class="home1-header12">Customer Solutions</h3>
                   <p data-role="accordion-content" class="accordion-content">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
@@ -1069,7 +1064,7 @@
               </div>
               <div data-role="accordion-container" class="accordion">
                 <div>
-                  <h3 class="home1-header14">Recruiting</h3>
+                  <h3 class="home1-header13">Recruiting</h3>
                   <p data-role="accordion-content" class="accordion-content">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
@@ -1101,7 +1096,7 @@
                 </div>
               </div>
               <div>
-                <div class="home1-container32">
+                <div class="home1-container31">
                   <script>
                     /*
                      Accordion - Code Embed
@@ -1157,10 +1152,10 @@
           </div>
         </section>
         <section class="home1-customer">
-          <div class="home1-header15">
+          <div class="home1-header14">
             <h2 class="home1-heading09">
               <span>Customer validation is an essential phase of the</span>
-              <span class="home1-text097">product development process</span>
+              <span class="home1-text105">product development process</span>
               <br />
             </h2>
           </div>
@@ -1238,17 +1233,17 @@
           </div>
         </section>
         <section class="home1-faq">
-          <div class="home1-header16">
+          <div class="home1-header15">
             <h2 class="home1-heading10">
               <span>Frequently asked&nbsp;</span>
-              <span class="home1-text103">questions</span>
+              <span class="home1-text111">questions</span>
               <span></span>
             </h2>
           </div>
           <div class="home1-content17">
             <div class="home1-column">
               <div class="home1-element04">
-                <h3 class="home1-header17">
+                <h3 class="home1-header16">
                   Lorem ipsum dolor sit ametetur elit?
                 </h3>
                 <p class="home1-content18">
@@ -1257,7 +1252,7 @@
                 </p>
               </div>
               <div class="home1-element05">
-                <h3 class="home1-header18">
+                <h3 class="home1-header17">
                   Excepteur sint occaecat cupidatat non sunt in culpa qui
                   officia deserunt mollit anim id est laborum?
                 </h3>
@@ -1269,7 +1264,7 @@
                 </p>
               </div>
               <div class="home1-element06">
-                <h3 class="home1-header19">
+                <h3 class="home1-header18">
                   Tempor incididunt ut labore et dolore magna aliquat enim ad
                   minim?
                 </h3>
@@ -1284,7 +1279,7 @@
             </div>
             <div class="home1-column1">
               <div class="home1-element07">
-                <h3 class="home1-header20">
+                <h3 class="home1-header19">
                   Tempor incididunt ut labore et dolore magna aliquat enim ad
                   minim?
                 </h3>
@@ -1297,7 +1292,7 @@
                 </p>
               </div>
               <div class="home1-element08">
-                <h3 class="home1-header21">
+                <h3 class="home1-header20">
                   Lorem ipsum dolor sit ametetur elit?
                 </h3>
                 <p class="home1-content22">
@@ -1306,7 +1301,7 @@
                 </p>
               </div>
               <div class="home1-element09">
-                <h3 class="home1-header22">Incididunt ut labore et dolore?</h3>
+                <h3 class="home1-header21">Incididunt ut labore et dolore?</h3>
                 <p class="home1-content23">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -1316,7 +1311,7 @@
           </div>
         </section>
         <div>
-          <div class="home1-container34">
+          <div class="home1-container33">
             <script>
               document.addEventListener('DOMContentLoaded', function() {
                 // get the element with the 'scroll-top' data-role
@@ -1335,16 +1330,16 @@
           </div>
         </div>
         <footer class="home1-footer">
-          <div class="home1-container35">
-            <img alt="logo" src="public/oujrsx01.svg" class="home1-image10" />
-            <nav class="home1-nav2">
-              <span class="home1-text105">Impressum</span>
-              <span class="home1-text106">Data Policy</span>
+          <div class="home1-container34">
+            <img alt="logo" src="public/oujrsx01.svg" class="home1-image09" />
+            <nav class="home1-nav1">
+              <span class="home1-text113">Impressum</span>
+              <span class="home1-text114">Data Policy</span>
             </nav>
           </div>
           <div class="home1-separator"></div>
-          <div class="home1-container36">
-            <span class="home1-text107">
+          <div class="home1-container35">
+            <span class="home1-text115">
               © 2023 pionatic, All Rights Reserved.
             </span>
           </div>

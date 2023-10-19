@@ -1,8 +1,8 @@
-.component-container {
+.app-component-container {
   display: flex;
   position: relative;
 }
-.component-form {
+.app-component-form {
   width: 850px;
   height: 252px;
   display: flex;
