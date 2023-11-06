@@ -125,36 +125,105 @@
             autoplay=""
             class="home1-video"
           ></video>
-          <button class="home1-button button">Explore Our Services</button>
-          <div>
+          <div class="home1-container01">
             <div class="home1-container02">
-              <div id="chat-container">
-                <div id="chat-window">
-                  <ul id="conversation"></ul>
+              <style>
+                .chat-container {
+                  max-width: 100%;
+                  background: var(--main-bg-color, #fff); /* Nutzt CSS-Variable oder Fallback */
+                  border-radius: var(--border-radius, 5px);
+                  overflow: hidden;
+                  box-shadow: var(--box-shadow, 0 2px 5px rgba(0,0,0,0.2));
+                  margin: var(--container-margin, 10px);
+                  font-family: var(--font-family, 'Arial', sans-serif);
+                }
+
+                .chat-window {
+                  height: var(--chat-window-height, 300px);
+                  overflow-y: auto;
+                  padding: var(--chat-window-padding, 20px);
+                  background-color: var(--chat-bg-color, #e9eff1);
+                  border-bottom: var(--border-style, 2px solid #d8d8d8);
+                }
+
+                .chat-conversation li {
+                  list-style-type: none;
+                  margin-bottom: var(--message-margin, 10px);
+                  line-height: var(--line-height, 1.4);
+                }
+
+                .chat-input {
+                  width: calc(100% - var(--button-width, 84px));
+                  padding: var(--input-padding, 10px);
+                  border-top: var(--border-style, 2px solid #d8d8d8);
+                  outline: none;
+                }
+
+                .chat-send-button {
+                  width: var(--button-width, 80px);
+                  background: var(--button-bg-color, #5cb85c);
+                  border: none;
+                  padding: var(--button-padding, 10px);
+                  color: white;
+                  cursor: pointer;
+                }
+
+                .chat-send-button:hover {
+                  background: var(--button-hover-color, #4cae4c);
+                }
+
+                /* Responsives Design für kleinere Geräte */
+                @media (max-width: 600px) {
+                  .chat-container {
+                    margin: 0;
+                    border-radius: 0;
+                  }
+                }
+              </style>
+
+              <div class="chat-container">
+                <div class="chat-window">
+                  <ul class="chat-conversation"></ul>
                 </div>
                 <input
                   type="text"
-                  id="user-input"
+                  class="chat-input"
                   placeholder="Fragen Sie etwas..."
                 />
-                <button id="send-button">Senden</button>
+                <button class="chat-send-button">Senden</button>
               </div>
 
               <script>
-                document.getElementById('send-button').addEventListener('click', function() {
-                  var userInput = document.getElementById('user-input').value;
-                  sendMessageToWorker(userInput);
+                // Rest des JavaScript bleibt gleich
+              </script>
+
+              <script>
+                // Behandeln des Sendens der Nachricht bei Druck der Enter-Taste
+                document.getElementById('user-input').addEventListener('keypress', function(e) {
+                  if (e.key === 'Enter') {
+                    e.preventDefault();
+                    sendMessage();
+                  }
                 });
+
+                // Behandeln des Klickereignisses für den Senden-Button
+                document.getElementById('send-button').addEventListener('click', sendMessage);
 
                 function appendMessageToConversation(who, text) {
                   var conversationElement = document.getElementById('conversation');
                   var newMessageElement = document.createElement('li');
                   newMessageElement.textContent = who + ': ' + text;
                   conversationElement.appendChild(newMessageElement);
+                  document.getElementById('chat-window').scrollTop = conversationElement.scrollHeight; // Scrollt zum neuesten Eintrag
                 }
 
-                function sendMessageToWorker(message) {
-                  appendMessageToConversation('Sie', message);
+                function sendMessage() {
+                  var userInputField = document.getElementById('user-input');
+                  var userInput = userInputField.value;
+                  userInputField.value = ''; // Leert das Eingabefeld nach dem Senden
+                  userInputField.focus(); // Setzt den Fokus zurück auf das Eingabefeld
+                  if (userInput.trim() === '') return; // Sendet keine leeren Nachrichten
+                  appendMessageToConversation('Sie', userInput);
 
                   // Ändern Sie die URL entsprechend der Adresse Ihres Cloudflare Workers
                   fetch('https://gptworker.hermanns-julian95.workers.dev/', {
@@ -162,20 +231,17 @@
                     headers: {
                       'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ prompt: message })
+                    body: JSON.stringify({ prompt: userInput })
                   })
-                  .then(function(response) {
-                    return response.json();
-                  })
-                  .then(function(data) {
-                    appendMessageToConversation('ChatGPT', data.response);
-                  })
-                  .catch(function(error) {
-                    console.error('Error during communication with the worker:', error);
-                  });
+                  .then(function(response) { return response.json(); })
+                  .then(function(data) { appendMessageToConversation('ChatGPT', data.response); })
+                  .catch(function(error) { console.error('Error during communication with the worker:', error); });
                 }
               </script>
             </div>
+          </div>
+          <div class="home1-container03">
+            <div class="home1-container04"></div>
           </div>
         </div>
         <section class="home1-slides">
@@ -310,7 +376,7 @@
             </div>
           </div>
           <div>
-            <div class="home1-container04">
+            <div class="home1-container06">
               <script>
                 const el = document.querySelector('.blaze-slider')
 
@@ -337,7 +403,7 @@
             lorem, malesuada in metus vitae, scelerisque accumsan ipsum. Nam
             pellentesque nulla leo, sagittis vehicula sem commodo nec.​
           </span>
-          <div class="home1-container05">
+          <div class="home1-container07">
             <div
               class="feature-card3-feature-card feature-card3-root-class-name"
             >
@@ -418,11 +484,11 @@
             <span>From Digital Strategy to Implementation</span>
             <br />
           </span>
-          <div class="home1-container06">
+          <div class="home1-container08">
             <div class="home1-step">
-              <div class="home1-container07">
+              <div class="home1-container09">
                 <div class="home1-line"></div>
-                <div class="home1-container08">
+                <div class="home1-container10">
                   <svg viewBox="0 0 1024 1024" class="home1-icon22">
                     <path
                       d="M634 558q92-64 92-174 0-88-63-151t-151-63-151 63-63 151q0 46 27 96t65 78l36 26v98h172v-98zM512 86q124 0 211 87t87 211q0 156-128 244v98q0 18-12 30t-30 12h-256q-18 0-30-12t-12-30v-98q-128-88-128-244 0-124 87-211t211-87zM384 896v-42h256v42q0 18-12 30t-30 12h-172q-18 0-30-12t-12-30z"
@@ -431,7 +497,7 @@
                 </div>
                 <div class="home1-line01"></div>
               </div>
-              <div class="home1-container09">
+              <div class="home1-container11">
                 <h1 class="home1-text018">Strategy</h1>
                 <span class="home1-text019">
                   <span>
@@ -443,9 +509,9 @@
               </div>
             </div>
             <div class="home1-step1">
-              <div class="home1-container10">
+              <div class="home1-container12">
                 <div class="home1-line02"></div>
-                <div class="home1-container11">
+                <div class="home1-container13">
                   <svg viewBox="0 0 1024 1024" class="home1-icon24">
                     <path
                       d="M746 512q26 0 45-18t19-46-19-46-45-18-45 18-19 46 19 46 45 18zM618 342q26 0 45-19t19-45-19-45-45-19-45 19-19 45 19 45 45 19zM406 342q26 0 45-19t19-45-19-45-45-19-45 19-19 45 19 45 45 19zM278 512q26 0 45-18t19-46-19-46-45-18-45 18-19 46 19 46 45 18zM512 128q158 0 271 100t113 242q0 88-63 150t-151 62h-74q-28 0-46 19t-18 45q0 22 16 42t16 44q0 28-18 46t-46 18q-160 0-272-112t-112-272 112-272 272-112z"
@@ -454,7 +520,7 @@
                 </div>
                 <div class="home1-line03"></div>
               </div>
-              <div class="home1-container12">
+              <div class="home1-container14">
                 <h1 class="home1-text022">Design</h1>
                 <span class="home1-text023">
                   <span>
@@ -466,9 +532,9 @@
               </div>
             </div>
             <div class="home1-step2">
-              <div class="home1-container13">
+              <div class="home1-container15">
                 <div class="home1-line04"></div>
-                <div class="home1-container14">
+                <div class="home1-container16">
                   <svg viewBox="0 0 1024 1024" class="home1-icon26">
                     <path
                       d="M576 736l96 96 320-320-320-320-96 96 224 224z"
@@ -480,7 +546,7 @@
                 </div>
                 <div class="home1-line05"></div>
               </div>
-              <div class="home1-container15">
+              <div class="home1-container17">
                 <h1 class="home1-text026">Development</h1>
                 <span class="home1-text027">
                   <span>
@@ -492,9 +558,9 @@
               </div>
             </div>
             <div class="home1-step3">
-              <div class="home1-container16">
+              <div class="home1-container18">
                 <div class="home1-line06"></div>
-                <div class="home1-container17">
+                <div class="home1-container19">
                   <svg viewBox="0 0 1024 1024" class="home1-icon29">
                     <path
                       d="M480 64c-265.096 0-480 214.904-480 480 0 265.098 214.904 480 480 480 265.098 0 480-214.902 480-480 0-265.096-214.902-480-480-480zM751.59 704c8.58-40.454 13.996-83.392 15.758-128h127.446c-3.336 44.196-13.624 87.114-30.68 128h-112.524zM208.41 384c-8.58 40.454-13.996 83.392-15.758 128h-127.444c3.336-44.194 13.622-87.114 30.678-128h112.524zM686.036 384c9.614 40.962 15.398 83.854 17.28 128h-191.316v-128h174.036zM512 320v-187.338c14.59 4.246 29.044 11.37 43.228 21.37 26.582 18.74 52.012 47.608 73.54 83.486 14.882 24.802 27.752 52.416 38.496 82.484h-155.264zM331.232 237.516c21.528-35.878 46.956-64.748 73.54-83.486 14.182-10 28.638-17.124 43.228-21.37v187.34h-155.264c10.746-30.066 23.616-57.68 38.496-82.484zM448 384v128h-191.314c1.88-44.146 7.666-87.038 17.278-128h174.036zM95.888 704c-17.056-40.886-27.342-83.804-30.678-128h127.444c1.762 44.608 7.178 87.546 15.758 128h-112.524zM256.686 576h191.314v128h-174.036c-9.612-40.96-15.398-83.854-17.278-128zM448 768v187.34c-14.588-4.246-29.044-11.372-43.228-21.37-26.584-18.74-52.014-47.61-73.54-83.486-14.882-24.804-27.75-52.418-38.498-82.484h155.266zM628.768 850.484c-21.528 35.876-46.958 64.746-73.54 83.486-14.184 9.998-28.638 17.124-43.228 21.37v-187.34h155.266c-10.746 30.066-23.616 57.68-38.498 82.484zM512 704v-128h191.314c-1.88 44.146-7.666 87.040-17.28 128h-174.034zM767.348 512c-1.762-44.608-7.178-87.546-15.758-128h112.524c17.056 40.886 27.344 83.806 30.68 128h-127.446zM830.658 320h-95.9c-18.638-58.762-44.376-110.294-75.316-151.428 42.536 20.34 81.058 47.616 114.714 81.272 21.48 21.478 40.362 44.938 56.502 70.156zM185.844 249.844c33.658-33.658 72.18-60.932 114.714-81.272-30.942 41.134-56.676 92.666-75.316 151.428h-95.898c16.138-25.218 35.022-48.678 56.5-70.156zM129.344 768h95.898c18.64 58.762 44.376 110.294 75.318 151.43-42.536-20.34-81.058-47.616-114.714-81.274-21.48-21.478-40.364-44.938-56.502-70.156zM774.156 838.156c-33.656 33.658-72.18 60.934-114.714 81.274 30.942-41.134 56.678-92.668 75.316-151.43h95.9c-16.14 25.218-35.022 48.678-56.502 70.156z"
@@ -503,7 +569,7 @@
                 </div>
                 <div class="home1-line07"></div>
               </div>
-              <div class="home1-container18">
+              <div class="home1-container20">
                 <h1 class="home1-text030">Implementation</h1>
                 <span class="home1-text031">
                   <span>
@@ -522,11 +588,11 @@
             <span>From Digital Strategy to Implementation</span>
             <br />
           </span>
-          <div class="home1-container19">
+          <div class="home1-container21">
             <div class="home1-step4">
-              <div class="home1-container20">
+              <div class="home1-container22">
                 <div class="home1-line08"></div>
-                <div class="home1-container21">
+                <div class="home1-container23">
                   <svg viewBox="0 0 1024 1024" class="home1-icon31">
                     <path
                       d="M634 558q92-64 92-174 0-88-63-151t-151-63-151 63-63 151q0 46 27 96t65 78l36 26v98h172v-98zM512 86q124 0 211 87t87 211q0 156-128 244v98q0 18-12 30t-30 12h-256q-18 0-30-12t-12-30v-98q-128-88-128-244 0-124 87-211t211-87zM384 896v-42h256v42q0 18-12 30t-30 12h-172q-18 0-30-12t-12-30z"
@@ -535,7 +601,7 @@
                 </div>
                 <div class="home1-line09"></div>
               </div>
-              <div class="home1-container22">
+              <div class="home1-container24">
                 <h1 class="home1-text039">Strategy</h1>
                 <span class="home1-text040">
                   <span>
@@ -547,9 +613,9 @@
               </div>
             </div>
             <div class="home1-step5">
-              <div class="home1-container23">
+              <div class="home1-container25">
                 <div class="home1-line10"></div>
-                <div class="home1-container24">
+                <div class="home1-container26">
                   <svg viewBox="0 0 1024 1024" class="home1-icon33">
                     <path
                       d="M746 512q26 0 45-18t19-46-19-46-45-18-45 18-19 46 19 46 45 18zM618 342q26 0 45-19t19-45-19-45-45-19-45 19-19 45 19 45 45 19zM406 342q26 0 45-19t19-45-19-45-45-19-45 19-19 45 19 45 45 19zM278 512q26 0 45-18t19-46-19-46-45-18-45 18-19 46 19 46 45 18zM512 128q158 0 271 100t113 242q0 88-63 150t-151 62h-74q-28 0-46 19t-18 45q0 22 16 42t16 44q0 28-18 46t-46 18q-160 0-272-112t-112-272 112-272 272-112z"
@@ -558,7 +624,7 @@
                 </div>
                 <div class="home1-line11"></div>
               </div>
-              <div class="home1-container25">
+              <div class="home1-container27">
                 <h1 class="home1-text043">Design</h1>
                 <span class="home1-text044">
                   <span>
@@ -570,9 +636,9 @@
               </div>
             </div>
             <div class="home1-step6">
-              <div class="home1-container26">
+              <div class="home1-container28">
                 <div class="home1-line12"></div>
-                <div class="home1-container27">
+                <div class="home1-container29">
                   <svg viewBox="0 0 1024 1024" class="home1-icon35">
                     <path
                       d="M576 736l96 96 320-320-320-320-96 96 224 224z"
@@ -584,7 +650,7 @@
                 </div>
                 <div class="home1-line13"></div>
               </div>
-              <div class="home1-container28">
+              <div class="home1-container30">
                 <h1 class="home1-text047">Development</h1>
                 <span class="home1-text048">
                   <span>
@@ -596,9 +662,9 @@
               </div>
             </div>
             <div class="home1-step7">
-              <div class="home1-container29">
+              <div class="home1-container31">
                 <div class="home1-line14"></div>
-                <div class="home1-container30">
+                <div class="home1-container32">
                   <svg viewBox="0 0 1024 1024" class="home1-icon38">
                     <path
                       d="M480 64c-265.096 0-480 214.904-480 480 0 265.098 214.904 480 480 480 265.098 0 480-214.902 480-480 0-265.096-214.902-480-480-480zM751.59 704c8.58-40.454 13.996-83.392 15.758-128h127.446c-3.336 44.196-13.624 87.114-30.68 128h-112.524zM208.41 384c-8.58 40.454-13.996 83.392-15.758 128h-127.444c3.336-44.194 13.622-87.114 30.678-128h112.524zM686.036 384c9.614 40.962 15.398 83.854 17.28 128h-191.316v-128h174.036zM512 320v-187.338c14.59 4.246 29.044 11.37 43.228 21.37 26.582 18.74 52.012 47.608 73.54 83.486 14.882 24.802 27.752 52.416 38.496 82.484h-155.264zM331.232 237.516c21.528-35.878 46.956-64.748 73.54-83.486 14.182-10 28.638-17.124 43.228-21.37v187.34h-155.264c10.746-30.066 23.616-57.68 38.496-82.484zM448 384v128h-191.314c1.88-44.146 7.666-87.038 17.278-128h174.036zM95.888 704c-17.056-40.886-27.342-83.804-30.678-128h127.444c1.762 44.608 7.178 87.546 15.758 128h-112.524zM256.686 576h191.314v128h-174.036c-9.612-40.96-15.398-83.854-17.278-128zM448 768v187.34c-14.588-4.246-29.044-11.372-43.228-21.37-26.584-18.74-52.014-47.61-73.54-83.486-14.882-24.804-27.75-52.418-38.498-82.484h155.266zM628.768 850.484c-21.528 35.876-46.958 64.746-73.54 83.486-14.184 9.998-28.638 17.124-43.228 21.37v-187.34h155.266c-10.746 30.066-23.616 57.68-38.498 82.484zM512 704v-128h191.314c-1.88 44.146-7.666 87.040-17.28 128h-174.034zM767.348 512c-1.762-44.608-7.178-87.546-15.758-128h112.524c17.056 40.886 27.344 83.806 30.68 128h-127.446zM830.658 320h-95.9c-18.638-58.762-44.376-110.294-75.316-151.428 42.536 20.34 81.058 47.616 114.714 81.272 21.48 21.478 40.362 44.938 56.502 70.156zM185.844 249.844c33.658-33.658 72.18-60.932 114.714-81.272-30.942 41.134-56.676 92.666-75.316 151.428h-95.898c16.138-25.218 35.022-48.678 56.5-70.156zM129.344 768h95.898c18.64 58.762 44.376 110.294 75.318 151.43-42.536-20.34-81.058-47.616-114.714-81.274-21.48-21.478-40.364-44.938-56.502-70.156zM774.156 838.156c-33.656 33.658-72.18 60.934-114.714 81.274 30.942-41.134 56.678-92.668 75.316-151.43h95.9c-16.14 25.218-35.022 48.678-56.502 70.156z"
@@ -607,7 +673,7 @@
                 </div>
                 <div class="home1-line15"></div>
               </div>
-              <div class="home1-container31">
+              <div class="home1-container33">
                 <h1 class="home1-text051">Implementation</h1>
                 <span class="home1-text052">
                   <span>
@@ -633,7 +699,7 @@
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
             </div>
-            <div class="home1-button1">
+            <div class="home1-button">
               <button class="button"><span>Get started today</span></button>
             </div>
           </div>
@@ -773,7 +839,7 @@
                 <br />
               </h2>
             </div>
-            <button class="home1-button3 button">
+            <button class="home1-button2 button">
               <span>
                 <span>Get started today</span>
                 <br />
@@ -1148,7 +1214,7 @@
                 </div>
               </div>
               <div>
-                <div class="home1-container33">
+                <div class="home1-container35">
                   <script>
                     /*
                      Accordion - Code Embed
@@ -1276,7 +1342,7 @@
                 ></path>
               </svg>
             </button>
-            <button class="button home1-button4">
+            <button class="button home1-button3">
               <span>
                 <span>View all cases</span>
                 <br />
@@ -1363,7 +1429,7 @@
           </div>
         </section>
         <div>
-          <div class="home1-container35">
+          <div class="home1-container37">
             <script>
               document.addEventListener('DOMContentLoaded', function() {
                 // get the element with the 'scroll-top' data-role
@@ -1382,7 +1448,7 @@
           </div>
         </div>
         <footer class="home1-footer">
-          <div class="home1-container36">
+          <div class="home1-container38">
             <img alt="logo" src="public/oujrsx01.svg" class="home1-image09" />
             <nav class="home1-nav1">
               <span class="home1-text111">Impressum</span>
@@ -1390,7 +1456,7 @@
             </nav>
           </div>
           <div class="home1-separator"></div>
-          <div class="home1-container37">
+          <div class="home1-container39">
             <span class="home1-text113">
               © 2023 pionatic, All Rights Reserved.
             </span>
